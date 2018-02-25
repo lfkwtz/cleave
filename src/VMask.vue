@@ -37,14 +37,13 @@ export default {
   mounted () {
     this.$el.value = this.value
     this.cleave = new Cleave(this.$el, this.options)
-    Object.keys(this.events).map((key) => {
+    Object.keys(this.events).forEach((key) => {
       this.$refs.input.addEventListener(key, this.events[key])
     })
     if (this.options.maxLength) {
       this.$el.setAttribute('maxlength', this.options.maxLength)
     }
 
-    // in case of cleave.js remove result or properties from cleave instance.
     if (this.cleave.properties && this.cleave.properties.hasOwnProperty('result')) {
       this.$watch('cleave.properties.result', this.emitEvent)
     } else {

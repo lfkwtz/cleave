@@ -1,41 +1,35 @@
-# Cleave
+# Vue Input Mask
 
-Cleave component is based on [cleave.js](https://github.com/nosir/cleave.js) for Vue Bulma.
-
-
-## Installation
-
-```
-$ npm install vue-cleave --save
-```
-
-
-## Examples
-
-```vue
+```html
 <template>
-  <cleave placeholder="Enter your credit card number" :options="{ creditCard: true }"></cleave>
+    <vue-input-mask :options="{
+            creditCard: true,
+            onCreditCardTypeChanged: onCreditCardTypeChanged
+        }"
+        v-model="number"
+        id="ccnumber"
+        name="ccnumber"
+        autocomplete="cc-number"
+        type="tel"
+    ></vue-input-mask>
 </template>
 
 <script>
-import Cleave from 'vue-cleave'
+import vueInputMask from 'vue2-input-mask';
 
 export default {
-  components: {
-    Cleave
-  }
-}
+    components: {
+        VueInputMask,
+    },
+    data() {
+        return {
+            number: '',
+        }
+    },
+    methods: {
+        onCreditCardTypeChanged: (type) => {
+            this.type = type;
+        }
+    }
 </script>
 ```
-
-
-## Badges
-
-![](https://img.shields.io/badge/license-MIT-blue.svg)
-![](https://img.shields.io/badge/status-stable-green.svg)
-
----
-
-> [fundon.me](https://fundon.me) &nbsp;&middot;&nbsp;
-> GitHub [@fundon](https://github.com/fundon) &nbsp;&middot;&nbsp;
-> Twitter [@_fundon](https://twitter.com/_fundon)

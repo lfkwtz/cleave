@@ -1,29 +1,28 @@
 {
-  "name": "vue-cleave",
-  "version": "1.2.2",
-  "description": "Cleave component is based on cleave.js for Vue",
-  "repository": "vue-bulma/cleave",
+  "name": "vue2-input-mask",
+  "version": "1.2.1",
+  "description": "Vue component for masked inputs. Based on cleave.js.",
   "license": "MIT",
-  "author": {
-    "name": "Fangdun Cai",
-    "email": "cfddream@gmail.com",
-    "url": "fundon.me"
+  "author": "Michael Lefkowitz <lefkowitz.michael@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lfkwtz/vue2-input-mask.git"
   },
+  "main": "src/VMask.vue",
   "keywords": [
-    "vue",
-    "vue-cleave",
     "cleave",
-    "javascript",
-    "html",
-    "format",
-    "form",
-    "input"
+    "mask",
+    "input",
+    "vue",
+    "vue2"
   ],
-  "main": "src/Cleave.vue",
+  "dependencies": {
+    "cleave.js": "1.1.1"
+  },
   "peerDependencies": {
     "vue": ">=2"
   },
-  "dependencies": {
-    "cleave.js": "^0.7.15"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
