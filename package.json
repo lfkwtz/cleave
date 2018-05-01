@@ -1,6 +1,6 @@
 {
   "name": "vue2-input-mask",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Vue component for masked inputs. Based on cleave.js.",
   "license": "MIT",
   "author": "Michael Lefkowitz <lefkowitz.michael@gmail.com>",
@@ -17,7 +17,7 @@
     "vue2"
   ],
   "dependencies": {
-    "cleave.js": "1.1.1"
+    "cleave.js": "1.3.3"
   },
   "peerDependencies": {
     "vue": ">=2"
